@@ -1,0 +1,26 @@
+.button {
+  display: inline-flex;
+  padding: 15px 20px;
+  color: $color-default-white;
+  background-color: $color-alice-blue;
+  border: none;
+  cursor: pointer;
+  transition: opacity $trans-default;
+
+  &:disabled,
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    color: $color-alice-blue;
+    background-color: $color-quartz;
+  }
+
+  @include active {
+    color: $color-alice-blue;
+    background-color: $color-quartz;
+    opacity: 0.8;
+  }
+}
