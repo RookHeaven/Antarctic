@@ -18,12 +18,42 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
-        <div class="container">
-          <p>Привет!</p>
+      <header class="header" data-header>
+        <div class="header__wrapper container">
+          <a class="header__logo">
+            <span class="visually-hidden">На главную страницу сайта</span>
+            <svg width="70" height="38">
+              <use xlink:href="img/sprite.svg#icon_logo"></use>
+            </svg>
+          </a>
+          <nav class="header__nav">
+            <ul>
+              <li>
+                <a href="#advantages">Преимущества</a>
+              </li>
+              <li>
+                <a href="#">Направления</a>
+              </li>
+              <li>
+                <a href="#catalog">Ближайшие круизы</a>
+              </li>
+              <li>
+                <a href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="header__button button" type="button" data-burger>
+            <span class="visually-hidden">Открыть  меню</span>
+          </button>
         </div>
       </header>
-      <main class="main">
+      <main>
+        <section class="promo">
+          <div class="promo__wrapper container">
+            <h1>Круизы в&nbsp;Антарктику</h1>
+            <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
+          </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="container">

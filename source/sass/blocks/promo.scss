@@ -1,0 +1,80 @@
+.promo {
+  position: relative;
+  min-height: 650px;
+  color: $color-alice-blue;
+  background-image: url("../img/promo/promo_background_desktop.jpg");
+  background-size: cover;
+  background-color: $color-tangaroa;
+
+  @include retina {
+    background-image: url("../img/promo/promo_background_desktop@2x.jpg");
+  }
+
+
+  @include vp-1023 {
+    min-height: 638px;
+    background-image: url("../img/promo/promo_background_tablet.jpg");
+
+    @include retina {
+      background-image: url("../img/promo/promo_background_tablet@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    min-height: 500px;
+    background-image: url("../img/promo/promo_background_mobile.jpg");
+
+    @include retina {
+      background-image: url("../img/promo/promo_background_mobile@2x.jpg");
+    }
+  }
+
+  &__wrapper {
+    padding: 270px 135px 278px;
+
+    @include vp-1023 {
+      padding: 268px 45px 275px;
+    }
+
+    @include vp-767 {
+      padding: 176px 15px 178px;
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 66px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+
+    @include vp-1023 {
+      font-size: 50px;
+      line-height: 61px;
+      text-shadow: none;
+    }
+
+    @include vp-767 {
+      font-size: 36px;
+      line-height: 45px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 20px;
+    line-height: 24px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+
+    @include vp-1023 {
+      font-size: 18px;
+      line-height: 22px;
+      text-shadow: none;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+    }
+  }
+}

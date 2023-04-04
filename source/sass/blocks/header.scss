@@ -1,3 +1,90 @@
 .header {
-  background-color: red;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    @include vp-1023 {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    @include vp-767 {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__logo {
+    color: $color-alice-blue;
+    cursor: default;
+
+    svg {
+      @include vp-1023 {
+        width: 38px;
+        height: 20px;
+      }
+
+      @include vp-767 {
+        width: 42px;
+        height: 22px;
+      }
+    }
+  }
+
+  &__nav {
+    @include vp-767 {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 33px;
+      max-width: 900px;
+      margin: 0;
+      padding: 0;
+
+      @include vp-1023 {
+        gap: 24px;
+      }
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      font-weight: 500;
+      color: $color-alice-blue;
+
+      @include vp-1023 {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @include vp-767 {
+      position: absolute;
+      top: 11px;
+      right: 6px;
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      background-image: url("../img/svg/icon_burger.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
