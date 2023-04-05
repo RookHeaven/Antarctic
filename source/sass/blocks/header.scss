@@ -46,13 +46,15 @@
     ul {
       display: flex;
       flex-wrap: wrap;
-      gap: 33px;
+      column-gap: 33px;
+      row-gap: 15px;
       max-width: 900px;
       margin: 0;
       padding: 0;
 
       @include vp-1023 {
-        gap: 24px;
+        column-gap: 24px;
+        max-width: 600px;
       }
     }
 
@@ -63,10 +65,19 @@
     a {
       font-weight: 500;
       color: $color-alice-blue;
+      transition: $trans-default;
 
       @include vp-1023 {
         font-size: 14px;
         line-height: 17px;
+      }
+
+      @include hover-focus {
+        opacity: 0.5;
+      }
+
+      @include active {
+        opacity: 0.8;
       }
     }
   }
@@ -86,5 +97,67 @@
       background-repeat: no-repeat;
       background-position: center;
     }
+  }
+}
+
+.header.is-open {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 35px;
+  width: 89%;
+  height: 100vh;
+  background-color: $color-alice-blue;
+  overflow-y: scroll;
+
+  .header__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__logo {
+    color: $color-tangaroa;
+  }
+
+  .header__nav {
+    display: block;
+    margin-top: 38px;
+
+    ul {
+      gap: 28px;
+    }
+
+    li {
+      width: 100%;
+    }
+
+    a {
+      margin: 0 0 8px 10px;
+      padding: 10px 0;
+      font-size: 18px;
+      line-height: 22px;
+      color: $color-tangaroa;
+    }
+  }
+
+  .header__button {
+    right: 0;
+    background-image: url("../img/svg/icon_close.svg");
+  }
+}
+
+.header.is-open + .header__overlay {
+  display: none;
+
+  @include vp-767 {
+    z-index: 10;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11%;
+    height: 100vh;
+    background-color: rgba(0, 43, 102, 0.5);
+    pointer-events: all;
   }
 }

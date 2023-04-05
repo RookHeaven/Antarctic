@@ -5,6 +5,7 @@
   background-image: url("../img/promo/promo_background_desktop.jpg");
   background-size: cover;
   background-color: $color-tangaroa;
+  box-shadow: 0 4px 4px rgba(0,0,0,.25);
 
   @include retina {
     background-image: url("../img/promo/promo_background_desktop@2x.jpg");
@@ -14,6 +15,7 @@
   @include vp-1023 {
     min-height: 638px;
     background-image: url("../img/promo/promo_background_tablet.jpg");
+    box-shadow: none;
 
     @include retina {
       background-image: url("../img/promo/promo_background_tablet@2x.jpg");
