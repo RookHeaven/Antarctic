@@ -1636,6 +1636,7 @@ button,
   background-image: url("../img/promo/promo_background_desktop.jpg");
   background-size: cover;
   background-color: #011c40;
+  background-position: center;
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }

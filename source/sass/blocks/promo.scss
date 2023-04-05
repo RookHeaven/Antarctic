@@ -5,6 +5,7 @@
   background-image: url("../img/promo/promo_background_desktop.jpg");
   background-size: cover;
   background-color: $color-tangaroa;
+  background-position: center;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
   @include retina {
