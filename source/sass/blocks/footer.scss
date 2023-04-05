@@ -95,9 +95,9 @@
   &__contacts {
     margin: 0 0 0 auto;
 
-      @include vp-767 {
-        margin: 0;
-      }
+    @include vp-767 {
+      margin: 0;
+    }
 
     ul {
       display: flex;
@@ -125,9 +125,9 @@
       &:not(:nth-child(3n)) {
         margin-right: 6px;
 
-      @include vp-1023 {
-        margin-right: 0;
-      }
+        @include vp-1023 {
+          margin-right: 0;
+        }
       }
     }
 
