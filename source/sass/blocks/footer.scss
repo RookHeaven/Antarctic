@@ -1,3 +1,162 @@
 .footer {
-  background-color: green;
+  background-color: $color-tangaroa;
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 31px;
+
+    @include vp-1023 {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-right: 45px;
+    }
+
+    @include vp-767 {
+      align-items: flex-start;
+      flex-direction: column;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__logo {
+    color: $color-alice-blue;
+    cursor: default;
+
+    @include vp-767 {
+      margin-bottom: 19px;
+    }
+
+    svg {
+      @include vp-1023 {
+        width: 38px;
+        height: 20px;
+      }
+
+      @include vp-767 {
+        width: 42px;
+        height: 22px;
+      }
+    }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 750px;
+      column-gap: 34px;
+      row-gap: 15px;
+      margin: 0 0 0 40px;
+      padding: 0;
+
+      @include vp-1023 {
+        column-gap: 24px;
+        max-width: 450px;
+        margin: 0 0 0 25px;
+      }
+
+      @include vp-767 {
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: 12px;
+        margin: 0 0 14px;
+      }
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      font-weight: 500;
+      color: $color-alice-blue;
+      transition: $trans-default;
+
+      @include vp-1023 {
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      @include hover-focus {
+        opacity: 0.5;
+      }
+
+      @include active {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__contacts {
+    margin: 0 0 0 auto;
+
+      @include vp-767 {
+        margin: 0;
+      }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      width: 180px;
+      margin: 0;
+      padding: 0;
+
+      @include vp-1023 {
+        width: 140px;
+        margin-right: -12px;
+      }
+
+      @include vp-767 {
+        justify-content: flex-start;
+        margin-left: -15px;
+      }
+    }
+
+    li {
+      list-style: none;
+
+      &:not(:nth-child(3n)) {
+        margin-right: 6px;
+
+      @include vp-1023 {
+        margin-right: 0;
+      }
+      }
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 40px;
+      min-height: 40px;
+      color: $color-alice-blue;
+      transition: $trans-default;
+
+      @include hover-focus {
+        background-color: $color-alice-blue;
+        color: $color-tangaroa;
+      }
+
+      @include active {
+        background-color: $color-alice-blue;
+        color: $color-tangaroa;
+        opacity: 0.8;
+      }
+    }
+
+    svg {
+      @include vp-1023 {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
 }
