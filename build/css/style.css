@@ -1729,7 +1729,7 @@ button,
 @media (max-width: 1023px) {
   .about {
     padding-top: 91px;
-    padding-bottom: 100px;
+    padding-bottom: 93px;
   }
 }
 @media (max-width: 767px) {
@@ -1816,6 +1816,166 @@ button,
 }
 .about__picture img {
   width: 100%;
+}
+
+.advantages {
+  padding-top: 110px;
+  padding-bottom: 120px;
+  background-image: url("../img/advantages/advantages_background_desktop.jpg");
+  background-size: cover;
+  background-color: #e3ecf6;
+  background-position: center;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .advantages {
+    background-image: url("../img/advantages/advantages_background_desktop@2x.jpg");
+  }
+}
+@media (max-width: 1023px) {
+  .advantages {
+    padding-top: 89px;
+    padding-bottom: 100px;
+    background-image: url("../img/advantages/advantages_background_tablet.jpg");
+  }
+}
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .advantages {
+    background-image: url("../img/advantages/advantages_background_tablet@2x.jpg");
+  }
+}
+@media (max-width: 767px) {
+  .advantages {
+    padding-top: 56px;
+    padding-bottom: 100px;
+    background-image: url("../img/advantages/advantages_background_mobile.jpg");
+  }
+}
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .advantages {
+    background-image: url("../img/advantages/advantages_background_mobile@2x.jpg");
+  }
+}
+.advantages h2 {
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+}
+@media (max-width: 1023px) {
+  .advantages h2 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages h2 {
+    margin-bottom: 32px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+.advantages ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: minmax(241px, 1fr);
+  grid-template-rows: minmax(241px, 1fr);
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 1023px) {
+  .advantages ul {
+    -ms-grid-rows: minmax(310px, 1fr);
+    grid-template-rows: minmax(310px, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages ul {
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    -ms-grid-rows: minmax(250px, 1fr);
+    grid-template-rows: minmax(250px, 1fr);
+  }
+}
+.advantages__item {
+  padding: 30px;
+  background-color: #f9fbfd;
+  list-style: none;
+}
+@media (max-width: 1023px) {
+  .advantages__item {
+    padding: 26px 15px 15px 20px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__item {
+    padding: 25px 20px 20px;
+  }
+}
+.advantages__item svg {
+  margin-bottom: 12px;
+}
+.advantages__item h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+@media (max-width: 1023px) {
+  .advantages__item h3 {
+    margin-bottom: 8px;
+  }
+}
+.advantages__item p {
+  margin: 0;
+  font-size: 14px;
+}
+@media (max-width: 1023px) {
+  .advantages__item--liner svg {
+    width: 21px;
+    height: 26px;
+  }
+}
+@media (max-width: 1023px) {
+  .advantages__item--all svg {
+    width: 27px;
+    height: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__item--all h3 {
+    padding-right: 35px;
+  }
+}
+.advantages__item--all p {
+  padding-right: 15px;
+}
+@media (max-width: 1023px) {
+  .advantages__item--all p {
+    padding-right: 5px;
+  }
+}
+@media (max-width: 1023px) {
+  .advantages__item--tours svg {
+    width: 36px;
+    height: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages__item--tours h3 {
+    padding-right: 55px;
+  }
+}
+@media (max-width: 1023px) {
+  .advantages__item--tours p {
+    padding-right: 3px;
+  }
 }
 
 /* @mixin hover-focus {

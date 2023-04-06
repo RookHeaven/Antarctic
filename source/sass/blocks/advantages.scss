@@ -1,0 +1,159 @@
+.advantages {
+  padding-top: 110px;
+  padding-bottom: 120px;
+  background-image: url("../img/advantages/advantages_background_desktop.jpg");
+  background-size: cover;
+  background-color: $color-solitude;
+  background-position: center;
+
+  @include retina {
+    background-image: url("../img/advantages/advantages_background_desktop@2x.jpg");
+  }
+
+  @include vp-1023 {
+    padding-top: 89px;
+    padding-bottom: 100px;
+    background-image: url("../img/advantages/advantages_background_tablet.jpg");
+
+    @include retina {
+      background-image: url("../img/advantages/advantages_background_tablet@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 56px;
+    padding-bottom: 100px;
+    background-image: url("../img/advantages/advantages_background_mobile.jpg");
+
+    @include retina {
+      background-image: url("../img/advantages/advantages_background_mobile@2x.jpg");
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+
+    @include vp-1023 {
+      font-size: 26px;
+      line-height: 39px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 32px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(241px, 1fr);
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+
+    @include vp-1023 {
+      grid-template-rows: minmax(310px, 1fr);
+      gap: 30px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 100%;
+      grid-template-rows: minmax(250px, 1fr);
+    }
+  }
+
+  &__item {
+    padding: 30px;
+    background-color: $color-alice-blue;
+    list-style: none;
+
+    @include vp-1023 {
+      padding: 26px 15px 15px 20px;
+    }
+
+    @include vp-767 {
+      padding: 25px 20px 20px;
+    }
+
+    svg {
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+
+      @include vp-1023 {
+        margin-bottom: 8px;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    &--liner {
+      svg {
+        @include vp-1023 {
+          width: 21px;
+          height: 26px;
+        }
+      }
+    }
+
+    &--all {
+      svg {
+        @include vp-1023 {
+          width: 27px;
+          height: 26px;
+        }
+      }
+
+      h3 {
+        @include vp-767 {
+          padding-right: 35px;
+        }
+      }
+
+      p {
+        padding-right: 15px;
+
+        @include vp-1023 {
+          padding-right: 5px;
+        }
+      }
+    }
+
+    &--tours {
+      svg {
+        @include vp-1023 {
+          width: 36px;
+          height: 26px;
+        }
+      }
+
+      h3 {
+        @include vp-767 {
+          padding-right: 55px;
+        }
+      }
+
+      p {
+        @include vp-1023 {
+          padding-right: 3px;
+        }
+      }
+    }
+  }
+}
