@@ -1,0 +1,19 @@
+.catalog {
+  padding-top: 95px;
+  padding-bottom: 120px;
+
+  h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+}
