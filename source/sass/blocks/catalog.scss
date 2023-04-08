@@ -1,12 +1,50 @@
 .catalog {
-  padding-top: 95px;
+  padding-top: 85px;
   padding-bottom: 120px;
 
+  @include vp-991 {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 55px;
+    padding-bottom: 65px;
+  }
+
+  &__wrapper {
+    padding-left: 55px;
+    padding-right: 55px;
+
+    @include vp-991 {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
+    @include vp-767 {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
   h2 {
+    margin-top: 0;
+    margin-bottom: 48px;
     font-weight: 600;
     font-size: 28px;
     line-height: 42px;
     text-align: center;
+
+    @include vp-991 {
+      font-size: 26px;
+      line-height: 39px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 32px;
+      font-size: 24px;
+      line-height: 36px;
+    }
   }
 
   ul {
@@ -15,5 +53,17 @@
     gap: 30px;
     margin: 0;
     padding: 0;
+
+    @include vp-1279 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include vp-991 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include vp-767 {
+      grid-template-columns: 100%;
+    }
   }
 }
