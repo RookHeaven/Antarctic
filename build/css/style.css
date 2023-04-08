@@ -2171,6 +2171,10 @@ button,
     max-width: 239px;
   }
 }
+.card:hover, .card:focus-within {
+  -webkit-box-shadow: 0 0 25px #29a3cc;
+          box-shadow: 0 0 25px #29a3cc;
+}
 .card:hover .card__content, .card:focus-within .card__content {
   margin-top: 0;
   background-color: #011c40;
@@ -2188,6 +2192,160 @@ button,
   .card:hover h3, .card:focus-within h3 {
     margin-top: -7px;
   }
+}
+
+.booking-form {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url("../img/form/form_background_desktop.jpg");
+  background-size: cover;
+  background-color: #e3ecf6;
+  background-position: center;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .booking-form {
+    background-image: url("../img/form/form_background_desktop@2x.jpg");
+  }
+}
+.booking-form__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.booking-form__content {
+  margin-left: 60px;
+  padding-top: 162px;
+  width: 50%;
+}
+.booking-form__content h2 {
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-size: 40px;
+  line-height: 60px;
+}
+.booking-form__content p {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  max-width: 370px;
+}
+.booking-form__inner {
+  width: 35%;
+  min-width: 403px;
+  margin-left: 56px;
+  padding: 44px 50px 50px;
+  background-color: #011c40;
+}
+
+.form h3 {
+  margin-top: 0;
+  margin-bottom: 27px;
+  color: #f9fbfd;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+.form__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.form__input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.form__input input {
+  width: 100%;
+  height: 43px;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+}
+.form__input input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+.form__input input::-moz-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+.form__input input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+.form__input input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+.form__input input::placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+.form__toggle {
+  width: 100%;
+  color: #f9fbfd;
+}
+.form__toggle label {
+  font-size: 10px;
+  line-height: 13px;
+}
+.form__toggle input[type=checkbox] + label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20px;
+  margin-bottom: 28px;
+  padding-left: 23px;
+  cursor: pointer;
+}
+.form__toggle input[type=checkbox] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-color: #f9fbfd;
+}
+.form__toggle input[type=checkbox]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  width: 10px;
+  height: 6px;
+  border-left: 1px solid #101a56;
+  border-bottom: 1px solid #101a56;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.form__button {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 11px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #011c40;
 }
 
 /* @mixin hover-focus {

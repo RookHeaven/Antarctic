@@ -107,6 +107,8 @@
 
   &:hover,
   &:focus-within {
+    box-shadow: 0 0 25px $color-summer-sky;
+
     .card__content {
       margin-top: 0;
       background-color: $color-tangaroa;
