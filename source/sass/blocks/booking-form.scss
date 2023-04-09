@@ -10,10 +10,37 @@
     background-image: url("../img/form/form_background_desktop@2x.jpg");
   }
 
+  @include vp-1023 {
+    padding-top: 89px;
+    padding-bottom: 100px;
+    background-image: url("../img/form/form_background_tablet.jpg");
+    box-shadow: none;
+
+    @include retina {
+      background-image: url("../img/form/form_background_tablet@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 59px;
+    padding-bottom: 64px;
+    background-image: url("../img/form/form_background_mobile.jpg");
+
+    @include retina {
+      background-image: url("../img/form/form_background_mobile@2x.jpg");
+    }
+  }
+
   &__wrapper {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+
+    @include vp-1023 {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__content {
@@ -21,11 +48,39 @@
     padding-top: 162px;
     width: 50%;
 
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 62%;
+      margin-bottom: 54px;
+      margin-left: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+
     h2 {
       margin-top: 0;
       margin-bottom: 9px;
       font-size: 40px;
       line-height: 60px;
+
+      @include vp-1023 {
+        margin-bottom: 3px;
+        font-size: 34px;
+        line-height: 51px;
+      }
+
+      @include vp-767 {
+        margin-bottom: 13px;
+        font-size: 24px;
+        line-height: 31px;
+      }
     }
 
     p {
@@ -33,6 +88,19 @@
       line-height: 27px;
       margin: 0;
       max-width: 370px;
+
+      @include vp-767 {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+    br {
+      display: none;
+
+      @include vp-767 {
+        display: block;
+      }
     }
   }
 
@@ -42,5 +110,16 @@
     margin-left: 56px;
     padding: 44px 50px 50px;
     background-color: $color-tangaroa;
+
+    @include vp-1023 {
+      width: 60%;
+      margin: 0;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      min-width: unset;
+      padding: 35px 30px 40px 30px;
+    }
   }
 }

@@ -6,6 +6,11 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
+
+    @include vp-767 {
+      line-height: 25px;
+      text-align: center;
+    }
   }
 
   &__wrapper {
@@ -14,8 +19,21 @@
   }
 
   &__input {
+    position: relative;
     width: 100%;
     margin-bottom: 20px;
+
+    @include hover {
+      input {
+        box-shadow: 0 0 25px $color-summer-sky;
+      }
+    }
+
+    @include focus {
+      input {
+        box-shadow: 0 0 25px $color-summer-sky;
+      }
+    }
 
     input {
       width: 100%;
@@ -49,6 +67,24 @@
       padding-left: 23px;
       cursor: pointer;
 
+      @include vp-767 {
+        margin-bottom: 30px;
+        padding-left: 28px;
+      }
+
+      @include hover {
+        &::before {
+          box-shadow: 0 0 12px $color-summer-sky;
+        }
+      }
+
+      @include active {
+        &::before {
+          box-shadow: 0 0 12px $color-summer-sky;
+          opacity: 0.7;
+        }
+      }
+
       &::before {
         content: "";
         position: absolute;
@@ -57,6 +93,17 @@
         width: 18px;
         height: 18px;
         background-color: $color-alice-blue;
+
+        @include vp-767 {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    input[type="checkbox"]:focus + label {
+      &::before {
+        box-shadow: 0 0 12px $color-summer-sky;
       }
     }
 
@@ -64,13 +111,17 @@
       &::after {
         content: "";
         position: absolute;
-        left: 3px;
-        top: 5px;
+        left: 5px;
+        top: 4px;
         width: 10px;
         height: 6px;
         border-left: 1px solid $color-sapphire;
         border-bottom: 1px solid $color-sapphire;
         transform: rotate(-45deg);
+
+        @include vp-767 {
+          top: 6px;
+        }
       }
     }
   }
