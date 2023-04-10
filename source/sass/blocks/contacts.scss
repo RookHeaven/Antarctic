@@ -23,7 +23,7 @@
 
     @include vp-767 {
       grid-template-columns: 1fr;
-      gap: 35px;
+      gap: 17px;
     }
   }
 
@@ -86,11 +86,17 @@
       }
     }
 
-    p {
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
       display: flex;
       align-items: center;
       margin-top: 0;
       margin-bottom: 23px;
+      list-style: none;
     }
 
     svg {
@@ -98,8 +104,16 @@
     }
 
     a {
-      display: flex;
-      align-items: center;
+      margin-left: 10px;
+
+      @include hover-focus {
+        text-decoration: underline;
+      }
+
+      @include active {
+        text-decoration: underline;
+        opacity: 0.5;
+      }
     }
 
     span {
