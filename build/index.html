@@ -15,6 +15,7 @@
     <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=de6f9a95-9c49-4623-ae0c-ce2ffdfc8922&lang=ru_RU"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -332,6 +333,28 @@
                   <button class="form__button button" type="submit">Оставить заявку</button>
                 </div>
               </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="contacts" id="contacts">
+          <h2 class="visually-hidden">Наши контакты</h2>
+          <div class="contacts__wrapper container">
+            <div class="contacts__map" id="map"></div>
+            <div class="contacts__info">
+              <h3>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</h3>
+              <p>
+                <svg width="18" height="22">
+                  <use xlink:href="img/sprite.svg#icon_pin"></use>
+                </svg>
+                <span>г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная, 19/8</span>
+              </p>
+              <a href="tel:88002000000">
+                <svg width="18" height="18">
+                  <use xlink:href="img/sprite.svg#icon_phone"></use>
+                </svg>
+                <span>8-800-200-00-00</span>
+              </a>
             </div>
           </div>
         </section>
