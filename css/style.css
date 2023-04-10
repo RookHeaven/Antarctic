@@ -2092,7 +2092,7 @@ button,
   .contacts__wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 17px;
   }
 }
 .contacts__map {
@@ -2165,7 +2165,11 @@ button,
     margin-bottom: 25px;
   }
 }
-.contacts__info p {
+.contacts__info ul {
+  margin: 0;
+  padding: 0;
+}
+.contacts__info li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2174,17 +2178,25 @@ button,
           align-items: center;
   margin-top: 0;
   margin-bottom: 23px;
+  list-style: none;
 }
 .contacts__info svg {
   min-width: 18px;
 }
 .contacts__info a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-left: 10px;
+}
+@media (hover: hover) {
+  .contacts__info a:hover:not(.focus-visible) {
+    text-decoration: underline;
+  }
+}
+.contacts__info a.focus-visible:focus {
+  text-decoration: underline;
+}
+.contacts__info a:active:not(.focus-visible) {
+  text-decoration: underline;
+  opacity: 0.5;
 }
 .contacts__info span {
   margin-left: 10px;
