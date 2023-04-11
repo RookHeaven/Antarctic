@@ -90,7 +90,6 @@
   }
 
   &__button {
-    max-width: 210px;
     min-height: 40px;
     margin-top: auto;
     justify-content: center;
@@ -99,10 +98,6 @@
     font-size: 14px;
     line-height: 21px;
     color: $color-tangaroa;
-
-    @include vp-991 {
-      max-width: 239px;
-    }
   }
 
   &:hover,
