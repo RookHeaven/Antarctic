@@ -39,7 +39,7 @@ const optimizeSvg = () =>
 const optimizeJpg = () =>
   gulp
       .src('build/img/**/*.{jpg,jpeg}')
-      .pipe(imagemin([mozJpeg({quality: 90, progressive: true})]))
+      .pipe(imagemin([mozJpeg({quality: 75, progressive: true})]))
       .pipe(gulp.dest('build/img'));
 
 const optimizePng = () =>
