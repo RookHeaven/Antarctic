@@ -1711,7 +1711,6 @@ button,
   color: #d8d8d9;
 }
 .card__button {
-  max-width: 210px;
   min-height: 40px;
   margin-top: auto;
   -webkit-box-pack: center;
@@ -1724,11 +1723,6 @@ button,
   font-size: 14px;
   line-height: 21px;
   color: #011c40;
-}
-@media (max-width: 991px) {
-  .card__button {
-    max-width: 239px;
-  }
 }
 .card:hover, .card:focus-within {
   -webkit-box-shadow: 0 0 25px #29a3cc;
