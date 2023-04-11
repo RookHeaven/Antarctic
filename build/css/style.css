@@ -918,7 +918,7 @@ button,
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 35px;
+  right: 0;
   z-index: 11;
   width: 89%;
   height: 100vh;
