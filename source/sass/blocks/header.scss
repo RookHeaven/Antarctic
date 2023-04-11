@@ -114,29 +114,32 @@
   align-items: flex-start;
   justify-content: flex-start;
 
+
+  ul {
+    gap: 28px;
+  }
+
+  li {
+    width: 100%;
+  }
+
+  a {
+    margin: 0 0 8px 10px;
+    padding: 10px 0;
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-tangaroa;
+  }
+
   .header__logo {
+    margin: 0;
+    padding: 0;
     color: $color-tangaroa;
   }
 
   .header__nav {
     display: block;
     margin-top: 38px;
-
-    ul {
-      gap: 28px;
-    }
-
-    li {
-      width: 100%;
-    }
-
-    a {
-      margin: 0 0 8px 10px;
-      padding: 10px 0;
-      font-size: 18px;
-      line-height: 22px;
-      color: $color-tangaroa;
-    }
   }
 
   .header__button {

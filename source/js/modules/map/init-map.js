@@ -1,4 +1,6 @@
 const initMap = () => {
+  const ymaps = window.ymaps;
+
   ymaps.ready(function () {
     let map = new ymaps.Map('map', {
       center: [59.93863106417265, 30.323036499999905],

@@ -935,25 +935,27 @@ button,
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-.header__wrapper.is-open .header__logo {
-  color: #011c40;
-}
-.header__wrapper.is-open .header__nav {
-  display: block;
-  margin-top: 38px;
-}
-.header__wrapper.is-open .header__nav ul {
+.header__wrapper.is-open ul {
   gap: 28px;
 }
-.header__wrapper.is-open .header__nav li {
+.header__wrapper.is-open li {
   width: 100%;
 }
-.header__wrapper.is-open .header__nav a {
+.header__wrapper.is-open a {
   margin: 0 0 8px 10px;
   padding: 10px 0;
   font-size: 18px;
   line-height: 22px;
   color: #011c40;
+}
+.header__wrapper.is-open .header__logo {
+  margin: 0;
+  padding: 0;
+  color: #011c40;
+}
+.header__wrapper.is-open .header__nav {
+  display: block;
+  margin-top: 38px;
 }
 .header__wrapper.is-open .header__button {
   right: 0;
