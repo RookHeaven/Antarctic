@@ -28,6 +28,11 @@
 
   &__inner {
     width: 50%;
+    padding-right: 50px;
+
+    @include vp-1023 {
+      padding-right: 0;
+    }
 
     @include vp-767 {
       width: 100%;
@@ -55,7 +60,6 @@
 
     p {
       margin: 0;
-      padding-right: 50px;
       line-height: 24px;
 
       @include vp-1023 {
@@ -72,6 +76,10 @@
   &__picture {
     @include vp-1023 {
       margin-top: 9px;
+    }
+
+    @include vp-767 {
+      width: 100%;
     }
 
     img {

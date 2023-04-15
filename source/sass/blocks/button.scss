@@ -5,6 +5,7 @@
   background-color: $color-alice-blue;
   border: none;
   cursor: pointer;
+  user-select: none;
   transition: opacity $trans-default;
 
   &:disabled,

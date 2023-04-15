@@ -62,7 +62,7 @@
       scrollbar-color: $color-default-white rgba($color: $color-default-white, $alpha: 0.2);
 
       &::-webkit-scrollbar {
-        width: 6px;
+        width: 2px;
       }
 
       &::-webkit-scrollbar-track {
@@ -90,7 +90,6 @@
   }
 
   &__button {
-    min-height: 40px;
     margin-top: auto;
     justify-content: center;
     align-items: center;
@@ -98,6 +97,7 @@
     font-size: 14px;
     line-height: 21px;
     color: $color-tangaroa;
+    text-align: center;
   }
 
   &:hover,
