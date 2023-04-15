@@ -563,7 +563,7 @@ button,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 8px 20px;
+  padding: 9px 20px;
   color: #ffffff;
   background-color: #f9fbfd;
   border: none;
@@ -855,6 +855,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-column-gap: 33px;
@@ -1618,28 +1621,31 @@ button,
 .catalog ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (260px)[4];
+  grid-template-columns: repeat(4, 260px);
   gap: 30px;
   margin: 0;
   padding: 0;
 }
 @media (max-width: 1279px) {
   .catalog ul {
-    -ms-grid-columns: (1fr)[3];
-    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (260px)[3];
+    grid-template-columns: repeat(3, 260px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media (max-width: 1023px) {
   .catalog ul {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (309px)[2];
+    grid-template-columns: repeat(2, 309px);
   }
 }
 @media (max-width: 767px) {
   .catalog ul {
-    -ms-grid-columns: 100%;
-    grid-template-columns: 100%;
+    -ms-grid-columns: 270px;
+    grid-template-columns: 270px;
   }
 }
 
@@ -1649,9 +1655,38 @@ button,
   overflow: hidden;
   list-style: none;
 }
+.card h3 {
+  margin: 0 0 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #f9fbfd;
+}
+@media (max-width: 1023px) {
+  .card h3 {
+    padding: 0;
+  }
+}
+.card > h3 {
+  position: absolute;
+  bottom: 2px;
+  left: 30px;
+  z-index: 1;
+}
+@media (max-width: 1023px) {
+  .card > h3 {
+    bottom: 6px;
+    left: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .card > h3 {
+    bottom: -2px;
+    left: 25px;
+  }
+}
 .card__picture {
   position: absolute;
-  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
@@ -1672,6 +1707,7 @@ button,
   }
 }
 .card__content {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1680,7 +1716,7 @@ button,
       -ms-flex-direction: column;
           flex-direction: column;
   height: 386px;
-  margin-top: 308px;
+  opacity: 0;
   padding: 28px 25px 35px;
   background-color: transparent;
 }
@@ -1695,34 +1731,10 @@ button,
   }
 }
 .card__content h3 {
-  margin: 0 0 20px;
-  padding-left: 5px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  color: #f9fbfd;
-}
-@media (max-width: 1023px) {
-  .card__content h3 {
-    padding: 0;
-  }
+  margin-bottom: 15px;
 }
 .card__content dl {
-  margin-top: 15px;
-  margin-bottom: 13px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #ffffff rgba(255, 255, 255, 0.2);
-}
-.card__content dl::-webkit-scrollbar {
-  width: 2px;
-}
-.card__content dl::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.2);
-}
-.card__content dl::-webkit-scrollbar-thumb {
-  background-color: #ffffff;
-  border-radius: 20px;
+  margin-top: 2px;
 }
 .card__content dt {
   font-weight: 500;
@@ -1734,6 +1746,22 @@ button,
   margin-bottom: 12px;
   font-size: 14px;
   color: #d8d8d9;
+}
+.card__wrapper {
+  z-index: -1;
+  margin-bottom: 13px;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff rgba(255, 255, 255, 0.2);
+}
+.card__wrapper::-webkit-scrollbar {
+  width: 2px;
+}
+.card__wrapper::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+}
+.card__wrapper::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 20px;
 }
 .card__button {
   margin-top: auto;
@@ -1754,12 +1782,13 @@ button,
           box-shadow: 0 0 25px #29a3cc;
 }
 .card:hover .card__content, .card:focus-within .card__content {
+  z-index: 1;
+  opacity: 1;
   margin-top: 0;
   background-color: #011c40;
 }
-.card:hover h3, .card:focus-within h3 {
-  margin-bottom: 0;
-  padding-left: 0;
+.card:hover .card__wrapper, .card:focus-within .card__wrapper {
+  overflow-y: auto;
 }
 @media (max-width: 1023px) {
   .card:hover h3, .card:focus-within h3 {
