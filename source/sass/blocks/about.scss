@@ -62,6 +62,10 @@
       margin: 0;
       line-height: 24px;
 
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
       @include vp-1023 {
         padding-right: 15px;
       }

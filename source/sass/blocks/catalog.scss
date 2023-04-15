@@ -2,7 +2,7 @@
   padding-top: 85px;
   padding-bottom: 120px;
 
-  @include vp-991 {
+  @include vp-1023 {
     padding-top: 90px;
     padding-bottom: 100px;
   }
@@ -16,7 +16,7 @@
     padding-left: 55px;
     padding-right: 55px;
 
-    @include vp-991 {
+    @include vp-1023 {
       padding-left: 60px;
       padding-right: 60px;
     }
@@ -35,7 +35,7 @@
     line-height: 42px;
     text-align: center;
 
-    @include vp-991 {
+    @include vp-1023 {
       font-size: 26px;
       line-height: 39px;
     }
@@ -49,21 +49,22 @@
 
   ul {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 260px);
     gap: 30px;
     margin: 0;
     padding: 0;
 
     @include vp-1279 {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 260px);
+      justify-content: center;
     }
 
-    @include vp-991 {
-      grid-template-columns: repeat(2, 1fr);
+    @include vp-1023 {
+      grid-template-columns: repeat(2, 309px);
     }
 
     @include vp-767 {
-      grid-template-columns: 100%;
+      grid-template-columns: 270px;
     }
   }
 }

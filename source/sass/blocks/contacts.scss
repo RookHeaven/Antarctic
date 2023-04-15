@@ -23,7 +23,7 @@
 
     @include vp-767 {
       grid-template-columns: 1fr;
-      gap: 17px;
+      gap: 9px;
     }
   }
 
@@ -101,6 +101,12 @@
 
     svg {
       min-width: 18px;
+    }
+
+    svg:nth-child(1) {
+      @include vp-1023 {
+        margin-bottom: 10px;
+      }
     }
 
     a {

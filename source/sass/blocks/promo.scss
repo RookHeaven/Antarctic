@@ -26,6 +26,8 @@
   @include vp-767 {
     min-height: 500px;
     background-image: url("../img/promo/promo_background_mobile.jpg");
+    background-position: bottom;
+
 
     @include retina {
       background-image: url("../img/promo/promo_background_mobile@2x.jpg");

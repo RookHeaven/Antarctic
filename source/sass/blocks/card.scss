@@ -4,9 +4,37 @@
   overflow: hidden;
   list-style: none;
 
+  h3 {
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: $color-alice-blue;
+
+    @include vp-1023 {
+      padding: 0;
+    }
+  }
+
+  > h3 {
+    position: absolute;
+    bottom: 2px;
+    left: 30px;
+    z-index: 1;
+
+    @include vp-1023 {
+      bottom: 6px;
+      left: 35px;
+    }
+
+    @include vp-767 {
+      bottom: -2px;
+      left: 25px;
+    }
+  }
+
   &__picture {
     position: absolute;
-    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
@@ -25,14 +53,15 @@
   }
 
   &__content {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 386px;
-    margin-top: 308px;
+    opacity: 0;
     padding: 28px 25px 35px;
     background-color: transparent;
 
-    @include vp-991 {
+    @include vp-1023 {
       padding: 25px 35px 35px;
     }
 
@@ -41,38 +70,11 @@
     }
 
     h3 {
-      margin: 0 0 20px;
-      padding-left: 5px;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 27px;
-      color: $color-alice-blue;
-
-      @include vp-991 {
-        padding: 0;
-      }
+      margin-bottom: 15px;
     }
 
     dl {
-      margin-top: 15px;
-      margin-bottom: 13px;
-      overflow-y: auto;
-
-      scrollbar-width: thin;
-      scrollbar-color: $color-default-white rgba($color: $color-default-white, $alpha: 0.2);
-
-      &::-webkit-scrollbar {
-        width: 2px;
-      }
-
-      &::-webkit-scrollbar-track {
-        background: rgba($color: $color-default-white, $alpha: 0.2);
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background-color: $color-default-white;
-        border-radius: 20px;
-      }
+      margin-top: 2px;
     }
 
     dt {
@@ -86,6 +88,26 @@
       margin-bottom: 12px;
       font-size: 14px;
       color: $color-quartz;
+    }
+  }
+
+  &__wrapper {
+    z-index: -1;
+    margin-bottom: 13px;
+    scrollbar-width: thin;
+    scrollbar-color: $color-default-white rgba($color: $color-default-white, $alpha: 0.2);
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba($color: $color-default-white, $alpha: 0.2);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-default-white;
+      border-radius: 20px;
     }
   }
 
@@ -105,15 +127,18 @@
     box-shadow: 0 0 25px $color-summer-sky;
 
     .card__content {
+      z-index: 1;
+      opacity: 1;
       margin-top: 0;
       background-color: $color-tangaroa;
     }
 
-    h3 {
-      margin-bottom: 0;
-      padding-left: 0;
+    .card__wrapper {
+      overflow-y: auto;
+    }
 
-      @include vp-991 {
+    h3 {
+      @include vp-1023 {
         margin-top: 4px;
       }
 
