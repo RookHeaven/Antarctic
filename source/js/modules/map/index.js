@@ -1,7 +1,7 @@
-import {initMap} from './init-map';
+import {activateMapOnScroll} from './init-map';
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
-    initMap();
+    activateMapOnScroll();
   });
 });
