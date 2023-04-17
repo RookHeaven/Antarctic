@@ -2155,7 +2155,7 @@ button,
 .contacts__map {
   width: 100%;
   height: 306px;
-  background-image: url("../img/map/map_desktop@1x.png");
+  background-image: url("../img/map/map_desktop.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
